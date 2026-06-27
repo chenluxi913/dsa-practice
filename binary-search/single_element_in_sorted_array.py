@@ -1,3 +1,14 @@
+"""
+LeetCode 540. Single Element in a Sorted Array
+
+Topic:
+- Binary Search
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
+"""
+
+
 class Solution:
     def singleNonDuplicate(self, nums:list[int]) -> int:
         left, right = 0, len(nums) - 1
@@ -13,10 +24,12 @@ class Solution:
             if nums[mid] == nums[mid + 1]:
                 left = mid + 2
             
-            # if the pair is valid, then the single element must be on the right side of the pair
+            # Pair is valid, search the right half.
 
             else:
                 right = mid
+
+            # Pair is broken, search the left half.
 
         return nums[left]
     
