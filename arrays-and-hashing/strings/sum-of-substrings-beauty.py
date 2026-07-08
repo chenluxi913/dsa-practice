@@ -10,14 +10,20 @@ Pattern:
 - Frequency Counting
 
 Idea:
-Fix the starting position.
 
-Extend the ending position one character
-at a time.
+Loop through all possible substrings.
 
-Maintain the frequency of each character.
+For each starting position:
+
+Maintain a frequency map while extending
+the ending position.
 
 For every substring:
+
+1. Update the frequency of the new character.
+2. Find the maximum frequency.
+3. Find the minimum non-zero frequency.
+4. Compute the beauty.
 
 Beauty =
 Maximum Frequency
@@ -40,9 +46,13 @@ Update Frequency
 
 ↓
 
-Add Beauty
+Calculate Beauty
 
-Time Complexity: O(n² × 26)
+↓
+
+Add to Answer
+
+Time Complexity: O(n² * 26)
 
 Space Complexity: O(26) = O(1)
 """
