@@ -47,6 +47,7 @@ binary-subarrays-with-sum.py
 LeetCode 1428:
 count-number-of-nice-subarray.py
 LeetCode 992:
+subarrays-with-k-interger.py
 
 Pattern: Exactly(K) = AtMost(K) − AtMost(K−1)
 Convert an Exactly K problem into two At Most K problems.
@@ -66,3 +67,9 @@ all longer windows ending after the current position are also valid.
 while valid:
     answer += n - right
     shrink
+
+6) Fixed Size Sliding Window
+LeetCode 1423:
+max-points-to-obtain.py
+
+Pattern: Fixed Window / Replace Ends
